@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Parse URL parameters for personalization
+  const urlParams = new URLSearchParams(window.location.search);
+  const guestName = urlParams.get('nombre');
+  const guestCount = urlParams.get('invitados');
+  const showInfo = urlParams.get('show');
+
+  const dedicationSection = document.getElementById('dedication-section');
+  const rsvpSection = document.getElementById('rsvp-section');
+  const sectionsToToggle = [dedicationSection, rsvpSection];
+
+  sectionsToToggle.forEach(section => {
+    if (section) {
+      if (showInfo === 'yes') {
+        section.classList.add('siMostrarInfo');
+      } else {
+        section.classList.add('noMostrarInfo');
+      }
+    }
+  });
+
+  if (guestName) {
+    const nameEls = document.querySelectorAll('#guest-name, #rsvp-guest-name');
+    nameEls.forEach(el => el.innerText = guestName);
+  }
+
+  if (guestCount) {
+    const countEl = document.getElementById('guest-count');
+    if (countEl) {
+      // Pad with zero if single digit, e.g. "2" -> "02"
+      countEl.innerText = guestCount.padStart(2, '0');
+    }
+  }
+
   // Reveal animations
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
