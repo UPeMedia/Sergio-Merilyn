@@ -1,0 +1,478 @@
+{
+    "id": 343,
+    "name": "sm-dedicatoria-section-2",
+    "title": "SM Dedicatoria Section",
+    "date": "2026-05-24 21:23:31",
+    "date_formatted": "May 24, 2026",
+    "author": {
+        "name": "info@bodacervantessoto.upbox.xyz",
+        "avatar": "https:\/\/secure.gravatar.com\/avatar\/3ff1438fd51d44bd9b68b20a9e4a32712432daf69e62f88909f103ab251dcd53?s=60&d=mm&r=g",
+        "url": "http:\/\/bodacervantessoto.upbox.xyz"
+    },
+    "permalink": "https:\/\/bodacervantessoto.upbox.xyz\/template\/sm-dedicatoria-section-2\/",
+    "thumbnail": null,
+    "bundles": [],
+    "tags": [],
+    "type": "section",
+    "content": [
+        {
+            "id": "4de729",
+            "name": "section",
+            "parent": 0,
+            "children": [
+                "2f82b3"
+            ],
+            "settings": [],
+            "label": "SM Dedicatoria Section"
+        },
+        {
+            "id": "2f82b3",
+            "name": "container",
+            "parent": "4de729",
+            "children": [
+                "7b2797",
+                "806634",
+                "cf479d",
+                "6a1010"
+            ],
+            "settings": {
+                "_padding": {
+                    "top": "80",
+                    "bottom": "80",
+                    "left": "24",
+                    "right": "24"
+                },
+                "_alignItems": "center",
+                "_direction": "column",
+                "_rowGap": "24"
+            }
+        },
+        {
+            "id": "7b2797",
+            "name": "text-basic",
+            "parent": "2f82b3",
+            "children": [],
+            "settings": {
+                "text": "Con especial cari\u00f1o para",
+                "tag": "p",
+                "_typography": {
+                    "font-family": "Inter",
+                    "font-size": "1.05rem",
+                    "letter-spacing": "0.32em",
+                    "text-transform": "uppercase",
+                    "color": {
+                        "id": "qufsve",
+                        "raw": "var(--gold)",
+                        "light": "#c9a961"
+                    },
+                    "text-align": "center"
+                },
+                "_margin": {
+                    "bottom": "15"
+                }
+            }
+        },
+        {
+            "id": "806634",
+            "name": "block",
+            "parent": "2f82b3",
+            "children": [
+                "da1c41",
+                "4eb3e9",
+                "35037a"
+            ],
+            "settings": {
+                "_alignItems": "center",
+                "_justifyContent": "center",
+                "_margin": {
+                    "bottom": "25"
+                }
+            }
+        },
+        {
+            "id": "da1c41",
+            "name": "divider",
+            "parent": "806634",
+            "children": [],
+            "settings": {
+                "style": "solid",
+                "width": "10%",
+                "justifyContent": "center",
+                "color": {
+                    "id": "qufsve",
+                    "raw": "var(--gold)",
+                    "light": "#c9a961"
+                }
+            }
+        },
+        {
+            "id": "4eb3e9",
+            "name": "heading",
+            "parent": "806634",
+            "children": [],
+            "settings": {
+                "text": "Familia Garc\u00eda L\u00f3pez",
+                "tag": "h2",
+                "_typography": {
+                    "font-family": "Italiana",
+                    "font-weight": "400",
+                    "font-size": "7.2rem",
+                    "color": {
+                        "id": "lwruhf",
+                        "raw": "var(--ink)",
+                        "light": "#1a2f4a"
+                    },
+                    "text-align": "center",
+                    "line-height": "1.1"
+                },
+                "_margin": {
+                    "bottom": "0"
+                },
+                "_cssId": "sm-guest-name",
+                "_padding": {
+                    "bottom": "15",
+                    "top": "15"
+                }
+            }
+        },
+        {
+            "id": "35037a",
+            "name": "divider",
+            "parent": "806634",
+            "children": [],
+            "settings": {
+                "style": "solid",
+                "width": "10%",
+                "justifyContent": "center",
+                "color": {
+                    "id": "qufsve",
+                    "raw": "var(--gold)",
+                    "light": "#c9a961"
+                }
+            }
+        },
+        {
+            "id": "cf479d",
+            "name": "block",
+            "parent": "2f82b3",
+            "children": [
+                "d13743",
+                "684616",
+                "ed3ffa"
+            ],
+            "settings": {
+                "_direction": "row",
+                "_border": {
+                    "width": {
+                        "top": "1",
+                        "right": "0",
+                        "bottom": "1",
+                        "left": "0"
+                    },
+                    "style": "solid",
+                    "color": {
+                        "id": "tgbbvk",
+                        "raw": "var(--muted)",
+                        "light": "rgba(26, 47, 74, 0.55)"
+                    }
+                },
+                "_width": "100%",
+                "_widthMax": "480",
+                "_justifyContent": "center",
+                "_alignItems": "center"
+            }
+        },
+        {
+            "id": "d13743",
+            "name": "block",
+            "parent": "cf479d",
+            "children": [
+                "7331bf",
+                "47a7ca"
+            ],
+            "settings": {
+                "_direction": "column",
+                "_alignItems": "center",
+                "_rowGap": "8",
+                "_padding": {
+                    "top": "24",
+                    "bottom": "24",
+                    "left": "24",
+                    "right": "24"
+                },
+                "_width": "50%",
+                "_border": {
+                    "width": {
+                        "top": "0",
+                        "right": "1",
+                        "bottom": "0",
+                        "left": "0"
+                    },
+                    "style": "solid",
+                    "color": {
+                        "raw": "rgba(250,247,242,0.15)"
+                    }
+                },
+                "_alignSelf": "flex-start"
+            }
+        },
+        {
+            "id": "7331bf",
+            "name": "text-basic",
+            "parent": "d13743",
+            "children": [],
+            "settings": {
+                "text": "N\u00famero de invitados",
+                "_typography": {
+                    "color": {
+                        "id": "lwruhf",
+                        "raw": "var(--ink)",
+                        "light": "#1a2f4a"
+                    },
+                    "font-size": "1rem",
+                    "font-family": "Inter",
+                    "text-align": "center",
+                    "line-height": "1.5rem",
+                    "letter-spacing": ".4rem",
+                    "text-transform": "uppercase"
+                },
+                "_width": "100%"
+            }
+        },
+        {
+            "id": "47a7ca",
+            "name": "text-basic",
+            "parent": "d13743",
+            "children": [],
+            "settings": {
+                "text": "02",
+                "tag": "p",
+                "_typography": {
+                    "font-family": "Italiana",
+                    "font-size": "3rem",
+                    "color": {
+                        "id": "qufsve",
+                        "raw": "var(--gold)",
+                        "light": "#c9a961"
+                    },
+                    "text-align": "center"
+                },
+                "_cssId": "sm-guest-count"
+            }
+        },
+        {
+            "id": "684616",
+            "name": "block",
+            "parent": "cf479d",
+            "children": [
+                "05f828"
+            ],
+            "settings": {
+                "_alignSelf": "center",
+                "_justifyContent": "center",
+                "_width": "25"
+            }
+        },
+        {
+            "id": "05f828",
+            "name": "divider",
+            "parent": "684616",
+            "children": [],
+            "settings": {
+                "height": "80",
+                "width": "1",
+                "style": "solid",
+                "direction": "vertical",
+                "justifyContent": "center"
+            }
+        },
+        {
+            "id": "ed3ffa",
+            "name": "block",
+            "parent": "cf479d",
+            "children": [
+                "a30c24",
+                "ef09c6"
+            ],
+            "settings": {
+                "_direction": "column",
+                "_alignItems": "center",
+                "_rowGap": "8",
+                "_padding": {
+                    "top": "24",
+                    "bottom": "24",
+                    "left": "24",
+                    "right": "24"
+                },
+                "_width": "50%",
+                "_alignSelf": "flex-start"
+            }
+        },
+        {
+            "id": "a30c24",
+            "name": "text-basic",
+            "parent": "ed3ffa",
+            "children": [],
+            "settings": {
+                "text": "Mesa",
+                "_typography": {
+                    "color": {
+                        "id": "lwruhf",
+                        "raw": "var(--ink)",
+                        "light": "#1a2f4a"
+                    },
+                    "font-size": "1rem",
+                    "font-family": "Inter",
+                    "text-align": "center",
+                    "line-height": "1.5rem",
+                    "letter-spacing": ".4rem",
+                    "text-transform": "uppercase"
+                },
+                "_width": "100%"
+            }
+        },
+        {
+            "id": "ef09c6",
+            "name": "text-basic",
+            "parent": "ed3ffa",
+            "children": [],
+            "settings": {
+                "text": "por asignar",
+                "_typography": {
+                    "color": {
+                        "id": "lwruhf",
+                        "raw": "var(--ink)",
+                        "light": "#1a2f4a"
+                    },
+                    "font-size": "2.2rem",
+                    "text-align": "center",
+                    "font-family": "Cormorant Garamond"
+                },
+                "_cssId": "sm-guest-mesa",
+                "tag": "p"
+            }
+        },
+        {
+            "id": "6a1010",
+            "name": "text",
+            "parent": "2f82b3",
+            "children": [],
+            "settings": {
+                "text": "<p style=\"text-align: center;\"><strong>Hemos decidido que nuestra celebraci\u00f3n sea solo para adultos, por lo que no podremos recibir ni\u00f1os. Gracias por entender y acompa\u00f1arnos.<\/strong><\/p>\n<p style=\"text-align: center;\"><strong>Esta invitaci\u00f3n es personal e intransferible.<br \/>Agradecemos de coraz\u00f3n tu presencia en este d\u00eda tan especial.<\/strong><\/p>",
+                "_typography": {
+                    "color": {
+                        "id": "lwruhf",
+                        "raw": "var(--ink)",
+                        "light": "#1a2f4a"
+                    },
+                    "text-align": "center",
+                    "font-size": "1.7rem",
+                    "font-style": "italic"
+                },
+                "_width": "100%",
+                "_widthMax": "400"
+            }
+        }
+    ],
+    "templateType": "section",
+    "globalVariables": [
+        {
+            "id": "azcwzo",
+            "name": "text-2xs",
+            "value": "clamp(0.82rem, calc(0.00018518518518518534 * (100vw - 36rem) + 0.82rem), 0.84rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": -3,
+                "scaleName": "2xs"
+            }
+        },
+        {
+            "id": "ijmjuo",
+            "name": "text-xs",
+            "value": "clamp(1.02rem, calc(0.0010185185185185173 * (100vw - 36rem) + 1.02rem), 1.13rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": -2,
+                "scaleName": "xs"
+            }
+        },
+        {
+            "id": "erlkyl",
+            "name": "text-s",
+            "value": "clamp(1.28rem, calc(0.002037037037037037 * (100vw - 36rem) + 1.28rem), 1.5rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": -1,
+                "scaleName": "s"
+            }
+        },
+        {
+            "id": "itijhd",
+            "name": "text-m",
+            "value": "clamp(1.6rem, calc(0.003703703703703703 * (100vw - 36rem) + 1.6rem), 2rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": 0,
+                "scaleName": "m"
+            }
+        },
+        {
+            "id": "btxklg",
+            "name": "text-l",
+            "value": "clamp(2rem, calc(0.0062037037037037035 * (100vw - 36rem) + 2rem), 2.67rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": 1,
+                "scaleName": "l"
+            }
+        },
+        {
+            "id": "rykkhm",
+            "name": "text-xl",
+            "value": "clamp(2.5rem, calc(0.00972222222222222 * (100vw - 36rem) + 2.5rem), 3.55rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": 2,
+                "scaleName": "xl"
+            }
+        },
+        {
+            "id": "ytmbtf",
+            "name": "text-2xl",
+            "value": "clamp(3.13rem, calc(0.014907407407407411 * (100vw - 36rem) + 3.13rem), 4.74rem)",
+            "category": "fahlau",
+            "scale": {
+                "scale": 3,
+                "scaleName": "2xl"
+            }
+        }
+    ],
+    "globalVariablesCategories": [
+        {
+            "id": "fahlau",
+            "name": "BCS Typography",
+            "scale": {
+                "scaleScope": "typography",
+                "scaleType": "tshirt",
+                "scaleNames": [
+                    "2xs",
+                    "xs",
+                    "s",
+                    "m",
+                    "l",
+                    "xl",
+                    "2xl"
+                ],
+                "prefix": "text-",
+                "minFontSize": 16,
+                "minScaleRatio": 1.25,
+                "minScaleRatioSelect": 1.25,
+                "maxFontSize": 20,
+                "maxScaleRatio": 1.333,
+                "maxScaleRatioSelect": 1.333,
+                "baseline": "m"
+            },
+            "utilityClasses": []
+        }
+    ]
+}

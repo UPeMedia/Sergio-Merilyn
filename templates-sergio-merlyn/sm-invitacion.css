@@ -1,0 +1,167 @@
+/**
+ * Sergio & Merilyn — WordPress Theme CSS
+ *
+ * Upload this file to:
+ *   wp-content/themes/bodacervantessoto/assets/css/sm-invitacion.css
+ *
+ * Then enqueue it in functions.php alongside the JS,
+ * OR paste into Bricks → Settings → Custom Code → Header Code section.
+ *
+ * What this CSS does:
+ *   1. Defines the CSS custom properties (design tokens) matching the static site
+ *   2. Provides the floating gold petals animation
+ *   3. Show/hide utility classes used by the JS
+ *   4. Scroll reveal animation (.sm-reveal)
+ *   5. Countdown & timeline section tweaks
+ */
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  /* Brand colors — same as static site */
+  --ink:          #1a2f4a;
+  --ink-soft:     #2d4664;
+  --sky:          #a8c5d6;
+  --gold:         #c9a961;
+  --gold-soft:    #d9bd82;
+  --paper:        #faf7f2;
+  --paper-warm:   #f3ece0;
+  --muted:        rgba(26, 47, 74, 0.55);
+  --hairline:     rgba(26, 47, 74, 0.18);
+
+  /* Fonts — must be loaded via Google Fonts or @font-face in theme */
+  --serif:   'Cormorant Garamond', 'Times New Roman', serif;
+  --display: 'Italiana', 'Cormorant Garamond', serif;
+  --sans:    'Inter', system-ui, sans-serif;
+
+  /* Bricks CSS variable aliases (used by existing BCS templates) */
+  --gold-bcs:              #FFD700;
+  --gold-bcs-l-10:         #fffbe8;
+  --perussian-blue-bcs:    #1c374c;
+  --perussian-blue-bcs-l-3:#5a6e7d;
+  --perussian-blue-bcs-l-8:#c1c8ce;
+}
+
+/* ─── Show / Hide — Guest sections toggled by JS ────────────────────────────── */
+/* Hidden by default — only shown when URL contains ?show=yes  */
+#dedication-section,
+#rsvp-section {
+  display: none !important;
+}
+
+#dedication-section.sm-visible,
+#rsvp-section.sm-visible {
+  display: block !important;
+}
+
+/* Generic utility classes (kept for backwards compatibility) */
+.sm-hidden {
+  display: none !important;
+}
+
+.sm-visible {
+  display: block;
+}
+
+/* ─── Floating Gold Petals ───────────────────────────────────────────────────── */
+.sm-petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.sm-petals .p {
+  position: absolute;
+  top: -20px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50% 0 50% 0;
+  background: var(--gold);
+  opacity: 0.35;
+  animation: sm-fall linear infinite;
+  filter: blur(0.3px);
+}
+
+@keyframes sm-fall {
+  0%   { transform: translate3d(0, -10vh, 0) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.5; }
+  100% { transform: translate3d(40px, 110vh, 0) rotate(720deg); opacity: 0; }
+}
+
+/* ─── Scroll Reveal ──────────────────────────────────────────────────────────── */
+.sm-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.sm-reveal.sm-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Bricks countdown element overrides — match static site style ───────────── */
+.brxe-countdown {
+  font-family: var(--display) !important;
+}
+
+.brxe-countdown .bricks-countdown-number {
+  font-family: var(--display) !important;
+  color: var(--ink) !important;
+}
+
+.brxe-countdown .bricks-countdown-label {
+  font-family: var(--sans) !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.32em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+}
+
+/* ─── Timeline two-column layout helpers ─────────────────────────────────────── */
+.sm-timeline-time {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.sm-timeline-event {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+/* ─── RSVP Form Bricks overrides ─────────────────────────────────────────────── */
+.brxe-form input,
+.brxe-form select,
+.brxe-form textarea {
+  font-family: var(--serif) !important;
+  border: 1px solid rgba(250, 247, 242, 0.2) !important;
+  background: rgba(250, 247, 242, 0.05) !important;
+  color: #faf7f2 !important;
+  border-radius: 2px !important;
+}
+
+.brxe-form input::placeholder,
+.brxe-form textarea::placeholder {
+  color: rgba(250, 247, 242, 0.4) !important;
+}
+
+.brxe-form label {
+  font-family: var(--sans) !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: rgba(250, 247, 242, 0.65) !important;
+}
+
+/* ─── Divider utility (hairline with diamond — used in verso bíblico) ───────── */
+.sm-divider-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-soft), transparent);
+}

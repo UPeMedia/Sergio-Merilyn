@@ -1,0 +1,63 @@
+<form class="sm-rsvp-form" id="sm-rsvp-form" onsubmit="return false">
+  <div>
+    <span class="sm-field-label">¿Asistirán?</span>
+    <div class="sm-choices">
+      <button type="button" class="sm-choice" data-val="Sí, ahí estaremos" onclick="smSelectChoice(this)">Sí, ahí estaremos</button>
+      <button type="button" class="sm-choice" data-val="No podremos asistir" onclick="smSelectChoice(this)">No podremos asistir</button>
+    </div>
+  </div>
+  <div style="display:none">
+    <label class="sm-field-label" for="sm-nombre">Nombre</label>
+    <input type="text" id="sm-nombre" placeholder="Tu nombre">
+  </div>
+  <input type="hidden" id="sm-asistencia" value="">
+  <button type="button" class="sm-submit" id="sm-submit-btn" disabled onclick="smSubmitRsvp()">Enviar confirmación</button>
+</form>
+<div class="sm-rsvp-success" id="sm-rsvp-success">¡Gracias! Hemos recibido tu confirmación.<br>¡Nos vemos el 7 de noviembre!</div>
+<script>
+var SM_GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxJs_OyjVknjyYdE6R5fbFuGfy9cx5ChZhsN57i7dumS0_4XSH99B0Wi2NswFG_qQ99/exec";
+
+// Pre-fill nombre from URL
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  var n = p.get("nombre");
+  if (n) {
+    var el = document.getElementById("sm-nombre");
+    if (el) el.value = n;
+  }
+})();
+
+function smSelectChoice(btn) {
+  var all = document.querySelectorAll(".sm-choice");
+  for (var i = 0; i < all.length; i++) { all[i].classList.remove("selected"); }
+  btn.classList.add("selected");
+  document.getElementById("sm-asistencia").value = btn.getAttribute("data-val");
+  var sb = document.getElementById("sm-submit-btn");
+  sb.removeAttribute("disabled");
+  sb.classList.add("ready");
+}
+
+function smSubmitRsvp() {
+  var nombreEl   = document.getElementById("sm-nombre");
+  var nombre     = nombreEl ? nombreEl.value : "";
+  var asistencia = document.getElementById("sm-asistencia").value;
+  if (!asistencia) return;
+
+  var sb = document.getElementById("sm-submit-btn");
+  sb.setAttribute("disabled", "disabled");
+  sb.textContent = "Enviando...";
+
+  fetch(SM_GOOGLE_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ nombre: nombre, asistencia: asistencia })
+  }).then(function() {
+    document.getElementById("sm-rsvp-form").style.display = "none";
+    document.getElementById("sm-rsvp-success").style.display = "block";
+  }).catch(function() {
+    document.getElementById("sm-rsvp-form").style.display = "none";
+    document.getElementById("sm-rsvp-success").style.display = "block";
+  });
+}
+</script>
